@@ -1,6 +1,7 @@
 // Section 5: Control Flow - Exercises 48
 
 using System;
+using System.Collections.Generic;
 
 namespace HelloWorld
 {
@@ -53,28 +54,45 @@ namespace HelloWorld
             //Console.WriteLine("[{0}]", string.Join(", ", hold));
             //for (var i = 0; i <= amountOfNumbers; i++)
 
-            var random = new Random();
-            var randomNumber = random.Next(1, 10);
+            //var random = new Random();
+            //var randomNumber = random.Next(1, 10);
 
 
-            for (var i = 0; i < 4; i++)
+            //for (var i = 0; i < 4; i++)
+            //{
+            //    Console.Write("Guess the number: ");
+            //    var guessedNumber = Convert.ToInt32(Console.ReadLine());
+            //    Console.WriteLine(randomNumber);
+
+            //    if (guessedNumber == randomNumber)
+            //    {
+            //        Console.WriteLine("You won!");
+            //        return;
+            //    }
+            //}
+
+            //Console.WriteLine("You lost!");
+            //}
+
+            // 5. Display largest number
+
+            Console.Write("Enter a series of numbers separated by commas: ");
+            var numbers = Console.ReadLine();
+            var eachNumber = numbers.Split(',');
+            List<string> numbersList = new List<string>(eachNumber);
+            var individualMaxNumber = Convert.ToInt32(eachNumber[0]);
+
+            foreach (var str in eachNumber)
             {
-                Console.Write("Guess the number: ");
-                var guessedNumber = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(randomNumber);
-
-                if (guessedNumber == randomNumber)
-                {
-                    Console.WriteLine("You won!");
-                    return;
-                }
+                var number = Convert.ToInt32(str);
+                if (number > individualMaxNumber)
+                    individualMaxNumber = number;
             }
+            Console.WriteLine("Largest number is: " + individualMaxNumber);
 
-            Console.WriteLine("You lost!");
-            }
-
-        // 5. Display largest number
 
         }
 
     }
+
+}
