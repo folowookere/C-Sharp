@@ -1,3 +1,5 @@
+// Grading students solution on HackerRank in C#
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,11 +19,11 @@ class Solution
 
             for (int i = 0; i < grades.Length; i++)
             {
-                /* if the remainder of grades mod 5 is less than two and
+                /* If the remainder of grades mod 5 is less than two and
                   is also less than 38 */
                 if (grades[i] % 5 > 2 && !(grades[i] < 38))
                 {
-                    /*then add to the array the grade rounded to the next multiple of 5
+                    /* Then add to the array the grade rounded to the next multiple of 5
                     for some reason -5 has to be first */
                     roundedArray[i] = grades[i] + (5 - grades[i] % 5 );
                 }
