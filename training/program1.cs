@@ -1,6 +1,8 @@
 using System;
 using System.Text;
 
+// Learning and working with strings in c#
+
 namespace FirstConsoleApp
 {
     class MainClass
