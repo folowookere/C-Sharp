@@ -82,7 +82,7 @@ namespace FirstConsoleApp
             //    Console.WriteLine(sb.ToString());
             //}
 
-            var city = "Providence";
+            var city = "Wooonsocket";
             var temperature = 70.4f;
             var currentDt = DateTime.Now;
             temperature = 90343.3f;
