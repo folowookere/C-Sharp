@@ -82,18 +82,45 @@ namespace FirstConsoleApp
             //    Console.WriteLine(sb.ToString());
             //}
 
-            var city = "Wooonsocket";
-            var temperature = 70.4f;
-            var currentDt = DateTime.Now;
-            temperature = 90343.3f;
-            Console.WriteLine(string.Format("Welcome to {0}. The time is {1:T}. The temp is {2:0,0.00}.", city, currentDt, temperature));
+            //var city = "Providence";
+            //var temperature = 70.4f;
+            //var currentDt = DateTime.Now;
+            //temperature = 90343.3f;
+            //Console.WriteLine(string.Format("Welcome to {0}. The time is {1:T}. The temp is {2:0,0.00}.", city, currentDt, temperature));
 
-            var test = "15,234";
-            Console.WriteLine(int.Parse(test.Replace(",", "")));
+            //var test = "15,234";
+            //Console.WriteLine(int.Parse(test.Replace(",", "")));
 
-            int result;
-            Console.WriteLine(int.TryParse("15234", out result)); 
-            Console.WriteLine(result);
+            //int result;
+            //Console.WriteLine(int.TryParse("15234", out result)); 
+            //Console.WriteLine(result);
+
+            // Rounding down 
+            //var test = Math.Floor(5.8);
+            // Rounding up
+            //var test2 = Math.Ceiling(3.4);
+            //Console.WriteLine(test2);
+
+            // Kind of like hardcoded number doesn't use up memory like a variable
+            const float pi = 3.14f;
+
+            // Can set where you want the list to start
+            //enum weekdays { Monday = 1, Tuesday, Wednesday, Thursday, Friday };
+
+            //var someDay = weekdays.Wednesday;
+
+            // Working with DateTime
+            var birthday = new DateTime(1988, 1, 13);
+            var difference = DateTime.Now - birthday;
+            Console.WriteLine(difference.Days / 365);
+
+            var someTime = new DateTime(2018, 10, 7, 6, 30, 30);
+            someTime.AddMinutes(30);
+            someTime.ToLongDateString();
+            Console.WriteLine(someTime);
+
+
+
         }
 
     }
